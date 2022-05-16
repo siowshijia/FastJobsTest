@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS JS Test Siow Shi Jia</title>
+
+    <style>
+        div[class^=question] { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <!-- 1. Loop -->
+    <div class="question-1">
+        <div id="a">
+            <div id="b"></div>
+        </div>
+    </div>
+
+    <script>
+        function appendChildren() {
+            let list = document.getElementsByClassName('question-1')[0].getElementsByTagName('div')
+
+            for (let item of list) {
+                let decorateDiv = document.createElement('div')
+                if (item.id !== '') { item.insertAdjacentElement('beforeend', decorateDiv) }
+            }
+        }
+        
+        appendChildren()
+    </script>
+
+    <!-- 2. Song -->
+    <div class="question-2"></div>
+
+    <script>
+        function Song(song_name) {
+            this.song_name = song_name
+            this.nextSong = 'undefined'
+            this.isRepeatingPlaylist = function(){
+                if( this.nextSong !== 'undefined' ) {
+                    return true;
+                }
+                    
+                return false;
+            }
+        }
+
+        let first = new Song('Hello'),
+            second = new Song('Eye of the tiger')
+
+        first.nextSong = second
+        second.nextSong = first
+
+        console.log(first.isRepeatingPlaylist())
+    </script>
+
+    <!-- 3. Topic Coloring -->
+    <div class="question-3">
+        <p data-topic-name="discussion">General discussion</p>
+        <p data-topic-name="bugs">Bugs</p>
+        <p data-topic-name="animals">Animals</p>
+    </div>
+
+    <script>
+        function newMessage(target) {
+            let topicName = document.querySelector('[data-topic-name="' + target + '"]')
+            if (topicName !== '') { topicName.style.backgroundColor = 'red' }
+        }
+
+        newMessage('discussion')
+    </script>
+
+    <!-- 4. Styling Links -->
+    <div class="question-4">
+        <a href="http://www.testdome.com" style="cursor: help; text-transform: uppercase;">Check documentation</a>
+    </div>
+
+    <!-- 5. Advanced Form -->
+    <div class="question-5">
+        <form>
+            <div>
+                <label>Formula: </label>
+                <input list="math_list" autocomplete="on">
+                <datalist id="math_list">
+                    <option value="sin">
+                    <option value="cos">
+                    <option value="tan">
+                    <option value="cot">
+                </datalist>
+            </div>
+            <div>
+                <label>Iterations: </label>
+                <input type="range" min="1" max="10">
+            </div>
+            <div>
+                <label>Precision: </label>
+                <input type="number" min="1" max="100" value="50">
+            </div>
+        </form>
+    </div>
+
+    <!-- 6. Spreadsheet -->
+    <div class="question-6" style="display: inline-block; margin-top: 0; margin-right: auto;">
+        <p style="margin: 0; text-align: center;">Purchase Orders</p>
+        <table border="1" style="border-collapse: collapse;">
+            <tr>
+                <th align="left" width="80">Order Date</th>
+                <th align="left" width="80">SKU</th>
+                <th align="left" width="80">Quantity</th>
+            </tr>
+            <tr>
+                <td align="left">07-16-2018</td>
+                <td align="right">523402</td>
+                <td align="right">54</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
