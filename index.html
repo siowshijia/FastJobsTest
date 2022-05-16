@@ -20,10 +20,14 @@
 
     <script>
         function appendChildren() {
+            // get all div in .question-1
             let list = document.getElementsByClassName('question-1')[0].getElementsByTagName('div')
 
+            // using for loop to append div to each item
             for (let item of list) {
+                // create domElement div
                 let decorateDiv = document.createElement('div')
+                // check if div has id, then append decorateDiv, else ignored
                 if (item.id !== '') { item.insertAdjacentElement('beforeend', decorateDiv) }
             }
         }
@@ -36,10 +40,12 @@
 
     <script>
         function Song(song_name) {
+            // assign values to object's properties based on the song_name passed to the function
             this.song_name = song_name
             this.nextSong = 'undefined'
             this.isRepeatingPlaylist = function(){
-                if( this.nextSong !== 'undefined' ) {
+                // check if nextSong is not undefined, then return true
+                if ( this.nextSong !== 'undefined' ) {
                     return true;
                 }
                     
@@ -65,7 +71,9 @@
 
     <script>
         function newMessage(target) {
+            // select selector with data attribute of topic name with the value of target
             let topicName = document.querySelector('[data-topic-name="' + target + '"]')
+            // if topicName is not empty, selector will be styled
             if (topicName !== '') { topicName.style.backgroundColor = 'red' }
         }
 
