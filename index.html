@@ -42,7 +42,9 @@
         function Song(song_name) {
             // assign values to object's properties based on the song_name passed to the function
             this.song_name = song_name
+            // set nextSong as undefined to check if new value is reassigned
             this.nextSong = 'undefined'
+            // method to check if song is a repeating playlist based on nextSong
             this.isRepeatingPlaylist = function(){
                 // check if nextSong is not undefined, then return true
                 if ( this.nextSong !== 'undefined' ) {
