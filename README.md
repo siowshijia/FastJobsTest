@@ -4,6 +4,8 @@
 
 Design Challenge - Front End Test
 
+Preview: https://siowshijia.github.io/fastjobstest/
+
 **code.html**
 
 Answers to the 6 questions:
