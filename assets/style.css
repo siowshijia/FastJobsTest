@@ -1,0 +1,156 @@
+:root {
+    --bs-primary: #f93f93;
+    --bs-secondary: #2b3151;
+    
+}
+
+/* Elements */
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.fj-primary {
+    color: var(--bs-primary);
+}
+
+.fj-secondary {
+    color: var(--bs-secondary);
+}
+
+.btn-primary {
+    border-color: var(--bs-primary);
+    background: var(--bs-primary);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    border-color: var(--bs-secondary);
+    background: var(--bs-secondary);
+}
+
+.btn-outline-secondary {
+    border-color: #0d3068;
+    color: #0d3068;
+}
+
+/* Navbar */
+.navbar-top { 
+    font-size: 12px; 
+}
+
+.navbar-brand img {
+    width: 120px;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler-icon {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--bs-primary);
+    background: none;
+    padding-right: 0;
+    width: auto;
+    height: auto;
+}
+
+.navbar-toggler-icon:before {
+    content: '\f0c9';
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.icon-flag {
+    width: 31px;
+    height: 20px;
+    border: solid 0.5px #ddd;
+    margin-right: 5px;
+}
+
+@media screen and (min-width: 576px) {
+    .navbar-top { 
+        font-size: 14px; 
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    h3 {
+        font-size: 2.75rem
+    }
+    
+    h6 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Jumbotron */
+.jumbotron-bg {
+    background: url(image_1_mobile.png) top 70% center/100% no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron-bg {
+        background: url(image_1.jpg) center center/cover no-repeat;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .jumbotron-main p.description {
+        font-size: 18px;
+    }
+}
+
+/* Content */
+.row-content img {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.slick-dots {
+    position: absolute;
+    top: 265px;
+    list-style-type: none;
+    padding: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.slick-dots li button {
+    background: #fee2f0;
+    outline: none;
+    width: 20px;
+    height: 5px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 0;
+}
+
+.slick-dots li.slick-active button {
+    background: var(--bs-primary);
+}
+
+@media screen and (min-width: 768px) {
+    .row-content img {
+        max-width: 100%;
+    }
+}
