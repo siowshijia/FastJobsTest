@@ -1,5 +1,9 @@
 # FastJobsTest
 
+index.html
+Design Challenge - Front End Test
+
+code.html
 Answers to the 6 questions:
 
 1. Loop
